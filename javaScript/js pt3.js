@@ -70,4 +70,17 @@ table.push(12);
 
 //
 //difference between slice and splice is --splice makes changes to original array and returns it
-//str.splice();
+//str.splice(index location,num of deletes,add in index);
+
+// @ts-check
+// nested arrays
+
+let newTable = [[1,2],[3,4],[5,6],[7,8],[9,0]]
+console.log(`this is an output from nested index i.e. ${newTable[2][0]}`)
+
+
+//practice Qs
+//tic-tac-toe
+
+let tic = [['X',null,'O'],[null,'X',null],['O',null,'X']]
+// task -- insert 'O' in any of the null spaces
