@@ -1,0 +1,41 @@
+h2 {
+  color: chocolate;
+}
+
+#peth1 {
+  color: darkgoldenrod;
+}
+
+#pets {
+  /* height: auto; */
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  /* height: 500px; */
+  width: 350px;
+  border: 2px solid black;
+  margin: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: justify;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h4 {
+  text-align: end;
+  color: rgb(60, 132, 165);
+}
+
+@media (max-width: 400px) {
+  #pets {
+    width: 375px;
+    flex-wrap: wrap;
+  }
+}

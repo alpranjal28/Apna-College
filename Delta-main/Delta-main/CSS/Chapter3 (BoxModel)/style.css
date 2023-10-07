@@ -1,0 +1,49 @@
+
+
+div{
+    height: 150px;
+    width: 400px;
+    background-color: aquamarine;
+    border: 2px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    text-align: justify;
+    display: inline-block;
+}
+
+h1{
+    border-width: 2px;
+    border-style: dashed;
+    border-color: purple;
+    margin: 10px 200px 30px;
+    padding: 20px 100px 20px;
+    text-align: center;
+}
+
+span{
+    background-color: peachpuff;
+    border: 2px solid red;
+    /* display: none; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

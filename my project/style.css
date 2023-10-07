@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* .mainbox{
+    height: 100vh;
+    background: url(pexels.jpg);
+    background-size: cover;
+} */
+
+/* #check{
+    display: none;
+} */
+.sidebar{
+    width: 200px;
+    height: 400px;
+    background-color: antiquewhite;
+}
+.mainbox .sidebar h2{
+    display: inline;
+    position: sticky;
+    /* margin: 10px 40px; */
+    padding: 20px 30px;
+}
+.menuitem{
+    box-shadow: 0 0 3px grey;
+    padding: 20px 20px;
+    /* border-radius: 10px; */
+    font-size: large;
+}

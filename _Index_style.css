@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    border: solid;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif,'Times New Roman', Times, serifS;
+}
+
+li{
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    position: relative;
+    border-color: aqua;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.7;
+}

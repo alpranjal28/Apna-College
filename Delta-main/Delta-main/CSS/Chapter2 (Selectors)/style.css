@@ -1,0 +1,87 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+}
+
+/* below here multiple element selectors are selected */
+h1,
+h3{
+    color: #b92b27;
+}
+
+#login:hover {
+    background-color: azure;
+}
+
+/* below is a id selector */
+#signup:active{
+    background-color: #b92b27;
+    color: azure;
+}
+
+/* below is a class selector */
+.upvote{
+    background-color: grey;
+    color: azure;
+}
+
+/* these are called descendants where we can define style for multiple/specific levels below */
+
+.post a{
+    color: orange;
+}
+
+nav ul li{
+    color: orchid;
+}
+
+nav ul li a{
+    color: turquoise;
+}
+/* sibling combinator element next to the first one gets selected */
+p + h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color: cornflowerblue;
+}
+
+/* child combinator applied on directly under parent element*/
+p > a{
+    text-transform: uppercase;
+}
+
+/* attribute selector */
+input[type="text"]{
+    color: rgb(236, 7, 7);
+}
+
+input[type="password"]{
+    color: rgb(255, 255, 255);
+}
+
+DIV>input{
+    background-color: salmon;
+}
+
+input[type="radio"]:checked  + label{
+    color: #b92b27;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+div:nth-of-type(2n){
+    background-color: burlywood;
+}
+
+li::first-letter{
+    color: #b92b27;
+}
+
+p::selection{
+    color: lightgreen;
+}
+
+
+

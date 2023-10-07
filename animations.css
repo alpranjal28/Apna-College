@@ -1,0 +1,37 @@
+@keyframes huha{
+    0%{
+        background-color: #fa0606;
+        border-radius: 0px;
+        height: 40px;
+        width: 40px;
+        /* text-align: center; */
+    }
+    100%{
+        background-color: #46f700;
+        border-radius: 50px;
+        height: 80px;
+        width: 80px;
+        /* text-align: center; */
+    }
+}
+div{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    animation-name: huha ,text;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    animation: huha infinite 3s ease-in-out 0s ;
+}
+
+@keyframes text{
+    from{color: white;}
+    to{color: black;}
+}
