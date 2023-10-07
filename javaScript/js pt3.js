@@ -66,3 +66,8 @@ table.push(12);
 //str.pop--deletes from end and returns/displays it
 //str.unshift--adds to the starting index [0] and moves the rest to subsequent indices//[0]a,[1]b-->[0]x,[1]a,[2]b
 //str.shift--deletes the starting index [0] value and moves the rest to subsequent indices //[0]x,[1]a,[2]b-->[0]a,[1]b
+
+
+//
+//difference between slice and splice is --splice makes changes to original array and returns it
+//str.splice();
