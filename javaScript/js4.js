@@ -1,3 +1,10 @@
+// LOOPS--"for loop" & "while loop"
+
+// NOTE: infinite loops are bad-- always check for conditions
+
+// "for" loops
+
+ 
 for(let i=0; i<=16; i++){
     console.log(i);
 }
@@ -42,17 +49,77 @@ for(j=44; j>=0; j=j-2){
     }
 }
 
+//table
+// let n = prompt(`table of`);
+let n = prompt(`table of `);
+n = parseInt(n);//this method converts a string into integer
+for(let i = n; i<=n*10; i=i+n){
+    console.log(i);
+    // if(i%5==0){
+    //     console.log(i);
+    // }
+}
+
+console.log(`nested loop`);
+//nested loops
+for(let i=1; i<=5; i++){
+    console.log(`outer loop ${i}`);
+    
+    for(j=1; j<=5; j++){
+        console.log(j);
+    }
+}
+
+//"while" loops
+console.log(`                                     while loop`);
+while (n<=10){
+    console.log(n);
+    n++;
+}
 
 
 
 
 
+//breaks
+console.log(`break keyword`);
+
+while (n<=20){
+    if(n==15){
+        break;
+    }
+    console.log(n);
+    n++;
+}
+console.log("we used break at 15");
 
 
 
 
 
+//loops with arrays
 
+
+console.log(`fruit basket`);
+let fruits = ["mango","apple","banana","litchi","orange"];
+fruits.push("pineapple")
+// try odd/even/all
+console.log(`odd`);
+for(i=1; i<fruits.length; i=i+2){
+    console.log(i, fruits[i]);
+}
+console.log(`even`);
+for(i=0;i<fruits.length;i=i+2){
+    console.log(i,fruits[i]);
+}
+console.log(`all`);
+for(i=0;i<fruits.length;i++){
+    console.log(i,fruits[i]);
+}
+console.log(`reverse order`);
+for(i=fruits.length-1; i>=0; i--){
+    console.log(i,fruits[i]);
+}
 
 
 
