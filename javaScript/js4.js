@@ -1,4 +1,4 @@
-// LOOPS--"for loop" & "while loop"
+// LOOPS--"for loop" , "while loop" & "for of loop"
 
 // NOTE: infinite loops are bad-- always check for conditions
 
@@ -80,7 +80,6 @@ while (n<=10){
 
 
 
-
 //breaks
 console.log(`break keyword`);
 
@@ -96,14 +95,15 @@ console.log("we used break at 15");
 
 
 
-
+//
 //loops with arrays
-
+//
 
 console.log(`fruit basket`);
 let fruits = ["mango","apple","banana","litchi","orange"];
 fruits.push("pineapple")
 // try odd/even/all
+
 console.log(`odd`);
 for(i=1; i<fruits.length; i=i+2){
     console.log(i, fruits[i]);
@@ -124,3 +124,25 @@ for(i=fruits.length-1; i>=0; i--){
 
 
 
+//nested loops with nested arrays
+
+let heroes = [["ironMan","spiderMan","thor"],["superMan","batMan","wonderWoman"]];
+
+for(let i=0;i<heroes.length;i++){
+    console.log(i,heroes[i]);
+    
+    for(let j=0;j<heroes[i].length;j++){
+        console.log(`j=${j},${heroes[i][j]}`);
+    }
+}
+
+
+
+//
+//for of loop
+//
+
+for(fruit of fruits){
+    console.log(fruit);
+}
+// here a new variable fruit is created before "of" for individual items of array

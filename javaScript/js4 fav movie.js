@@ -17,17 +17,3 @@ if(g==fm){
 //     console.log("no worries try again later");
 // }
 
-
-
-
-
-
-//loops with arrays
-
-
-
-let fruits = ["mango","apple","banana","litchi","orange"];
-
-for(i=0; i<fruits.length; i++){
-    console.log(i, fruits[i]);
-}
