@@ -146,3 +146,12 @@ for(fruit of fruits){
     console.log(fruit);
 }
 // here a new variable fruit is created before "of" for individual items of array
+
+
+for(list of heroes){
+    for(hero of list){
+    console.log(hero);
+    }
+}
+
+//nesting-- [[00,01,02],[10,11,12]]
