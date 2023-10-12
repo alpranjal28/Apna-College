@@ -17,7 +17,7 @@ while(true){
         break;
     }else if(guess<rn){
         guess = prompt(`your guess was wrong! Try a higher number!`)
-    }else if(guess>rn){
+    }else{
         guess = prompt(`your guess was wrong! Try a lower number!`)
     }
 }
