@@ -1,3 +1,5 @@
+//object literals
+
 const post = {
     name: "@pranjal",
     age: "peaceful Hamas /s",
@@ -6,6 +8,7 @@ const post = {
     tags: ["#israel", "#war", "#palestine","#terrorists"]
 };
 
+// nested object literals 
 const class4 ={
     aditya: {
         grade: "b+",
