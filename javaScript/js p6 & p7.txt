@@ -1,0 +1,5 @@
+
+
+arrow                                                     function
+1)lexical scope                                           1)scope > this > calling object
+parent scope > call
