@@ -82,3 +82,84 @@ console.log(max);
 let ary = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 let check10 = ary.every((el) => el % 10 == 0);
 console.log(check10);
+//using reduce
+function getMin(ary) {
+    let min = ary.reduce((min, el) => {
+        if (min > el) {
+            return el;
+        } else if (min < el) {
+            return min;
+        }
+    });
+    return min;
+}
+
+console.log(getMin(ary));
+
+//default parameter
+//eg.            function sum(a, b=5){
+//                   return a+b;
+//               };
+// here b value is given a default value in case the 2nd number not provided
+
+//spread ----->>(...array) i.e. 3 dots before array name
+// when we access a lot of values say in an array or object
+// which can be accessed individualy w/o making mustiple arguements
+//eg.
+//  try--Math.min(ary) //NaN
+//  try--Math.min(...ary) //10
+console.log(ary);
+console.log(...ary);
+console.log("apnaCollege");
+console.log(..."apnaCollege");
+
+//can also be used in following way
+const hw = "hello world!";
+console.log(hw);
+
+const hlw = [...hw];
+console.log(hlw);
+//and to copy properties into a new variable
+
+//rest (opposite to spread)
+function numb(...arg) {
+    //... before arguement can now take indefinite values, collect it and then process
+    console.log(`You gave us : ${arg}`);
+    for (let i = 0; i < arg.length; i++) {
+        console.log(`They are : ${arg[i]}`);
+    }
+}
+//try numb(1,5,8,96,4,7,8,64,1,2)
+
+//destructuring
+let names = ["pranjal", "shlesha", "avita", "kuldeep", "abc", "pqr", "xyz"];
+let [winner, runnerUp, third, fourth, ...others] = names; // index 0,1,2,3 will be stored in the following from names
+
+console.log(winner, runnerUp, third, fourth);
+console.log(winner);
+console.log(runnerUp);
+console.log(third);
+console.log(fourth);
+console.log(others);
+
+// destructuring Objects
+let student = {
+    name: "pranjal",
+    class: 7,
+    age: 12,
+    subjects: ["english", "hindi", "math", "science"],
+    username: "alpranjal28",
+    password: "abc@123",
+};
+
+let { username, password } = student;
+// variable name matched with key & got stored as such
+console.log(username);
+console.log(password);
+// or
+let { username: user, password: pass, city : place ="ambikapur" } = student;
+//key named username/password/city was stored in variable user/pass/place
+//default value ambikapur is set in case it is not provided
+console.log(user);
+console.log(pass);
+console.log(place);
