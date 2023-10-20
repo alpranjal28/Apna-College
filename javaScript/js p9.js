@@ -34,4 +34,11 @@ btn.innerText = "Click me";
 inp.placeholder = "username"
 btn.id = "btn"
 
-document.querySelector("#btn").color = "white"
+let newH1 = document.createElement("h1")
+newH1.innerHTML= "<u>DOM Practice</u>"
+document.querySelector("body").append(newH1)
+newH1.classList.add("purple")
+
+let newp = document.createElement("p")
+newp.innerHTML = "Apna College <b>Delta</b> Practice"
+document.querySelector("body").append(newp)

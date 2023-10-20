@@ -12,5 +12,10 @@
 }
 
 #btn {
-    background-color: chocolate;
+    background-color: blue;
+    color: white;
+}
+
+.purple{
+    color: purple;
 }
