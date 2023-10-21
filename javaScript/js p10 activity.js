@@ -7,6 +7,10 @@ btn.addEventListener("click", function () {
     let div = document.querySelector("div");
     div.style.backgroundColor = randomColor;
     console.log(`color updated`);
+
+    div.addEventListener("mouseenter",function(){
+        console.log(`mouse entered div`);
+    })
 });
 
 function getRandomColor() {
