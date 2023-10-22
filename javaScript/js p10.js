@@ -56,12 +56,32 @@ form.addEventListener("submit", function (event) {
     let pass = document.querySelector("#pass");
     console.log(user.value);
     console.log(pass.value);
-    alert(`hi ${user.value}! Your password is ${pass.value}`)
+    alert(`hi ${user.value}! Your password is ${pass.value}`);
     //or
-    console.dir(form)
-    let userx = this[0] // or this.elements[0]
-    let passx = this[1] // or this.elements[1]
+    console.dir(form);
+    let userx = this[0]; // or this.elements[0]
+    let passx = this[1]; // or this.elements[1]
     console.log(userx.value);
     console.log(passx.value);
 });
 
+//assignment Qs
+let jsbtn = document.createElement("button");
+document.querySelector("body").append(jsbtn);
+jsbtn.innerText = "don't click";
+jsbtn.addEventListener("click", function () {
+    this.classList.toggle("green");
+});
+
+let jsinp = document.createElement("input");
+document.querySelector("body").append(jsinp);
+jsinp.placeholder = "enter your name";
+
+jsinp.addEventListener("input", function () {
+    console.log(jsinp.value);
+    jshead.innerText = jsinp.value;
+});
+
+let jshead = document.createElement("h2");
+document.querySelector("body").prepend(jshead);
+// jshead.innerText = jsinp.value;
