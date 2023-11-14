@@ -1,0 +1,1 @@
+ejs by default looks in a folder named views

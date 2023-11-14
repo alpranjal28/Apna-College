@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>rollDice</title>
+    </head>
+    <body>
+        <h1>random number : <%= rollDice %></h1>
+        <!-- num is defined as 2nd arg inside an object in res.render -->
+
+        <% if(rollDice == 6){ %>
+        <!-- control flow,no output -->
+        <h2>Great! Roll dice again!!</h2>
+        <% } %>
+    </body>
+</html>
