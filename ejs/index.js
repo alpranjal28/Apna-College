@@ -4,6 +4,8 @@ const path = require("path");
 
 const port = 8080;
 
+app.use(express.static(path.join(__dirname, "public/css")));
+app.use(express.static(path.join(__dirname, "public/js")));
 app.set("view engine", "ejs"); //ejs internally aquired by express; no need to require
 app.set("views", path.join(__dirname, "/views")); //__dirname gives current working dir of index.js
 
@@ -20,8 +22,15 @@ app.get("/rolldice", (req, res) => {
 
 app.get("/ig/:username", (req, res) => {
     let { username } = req.params;
-    console.log(username);
-    res.render("insta.ejs", { username });
+    const instaData = require("./data.json");
+    // console.log(instaData);
+    const data = instaData[username];
+    // console.log(data);
+    if (data) {
+        res.render("insta.ejs", { data });
+    } else {
+        res.render("error.ejs");
+    }
 });
 
 app.listen(port, () => {
