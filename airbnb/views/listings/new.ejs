@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AirLust</title>
+    </head>
+    <body>
+        <h1>Create new listing</h1>
+        <form method="POST" action="/listings">
+            <input
+                type="text"
+                name="listing[title]"
+                placeholder="enter title"
+            /><br />
+            <textarea
+                name="listing[description]"
+                cols="30"
+                rows="10"
+                placeholder="enter description"
+            ></textarea
+            ><br />
+            <input
+                type="text"
+                name="listing[image]"
+                placeholder="enter image URL/Link"
+            /><br />
+            <input
+                type="number"
+                name="listing[price]"
+                placeholder="enter Price"
+            /><br />
+            <input
+                type="text"
+                name="listing[country]"
+                placeholder="enter Country"
+            /><br />
+            <input
+                type="text"
+                name="listing[location]"
+                placeholder="enter Location"
+            /><br />
+            <button>submit</button>
+        </form>
+    </body>
+</html>
