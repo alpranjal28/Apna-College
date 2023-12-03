@@ -4,11 +4,14 @@ const mongoose = require("mongoose");
 const Listing = require("../airbnb/models/listing.js");
 const path = require("path");
 const methodOverride = require("method-override");
+const ejsMate = require("ejs-mate");
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+app.engine("ejs", ejsMate);
+app.use(express.static(path.join(__dirname, "/public")))
 
 main()
     .then(() => {
@@ -67,12 +70,12 @@ app.put("/listings/:id", async (req, res) => {
 });
 
 //delete route
-app.delete("/listings/:id", async(req,res)=>{
+app.delete("/listings/:id", async (req, res) => {
     let { id } = req.params;
-    let deletedListing = await Listing.findByIdAndDelete(id)
+    let deletedListing = await Listing.findByIdAndDelete(id);
     console.log("deleted listing", deletedListing);
-    res.redirect("/listings")
-})
+    res.redirect("/listings");
+});
 
 app.listen(8080, () => {
     console.log(`server is listening to port 8080`);

@@ -1,46 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>AirLust</title>
-    </head>
-    <body>
+<% layout("/layouts/boilerplate.ejs") %>
+<!-- <body> -->
+<div class="row">
+    <div class="col-8 offset-2">
+        <br /><br />
         <h1>Create new listing</h1>
+        <br />
         <form method="POST" action="/listings">
-            <input
-                type="text"
-                name="listing[title]"
-                placeholder="enter title"
-            /><br />
-            <textarea
-                name="listing[description]"
-                cols="30"
-                rows="10"
-                placeholder="enter description"
-            ></textarea
-            ><br />
-            <input
-                type="text"
-                name="listing[image]"
-                placeholder="enter image URL/Link"
-            /><br />
-            <input
-                type="number"
-                name="listing[price]"
-                placeholder="enter Price"
-            /><br />
-            <input
-                type="text"
-                name="listing[country]"
-                placeholder="enter Country"
-            /><br />
-            <input
-                type="text"
-                name="listing[location]"
-                placeholder="enter Location"
-            /><br />
-            <button>submit</button>
+            <div>
+                <label for="title" class="form-label">Title</label>
+                <input
+                    type="text"
+                    name="listing[title]"
+                    placeholder="enter catchy title"
+                    id="title"
+                    class="form-control mb-3"
+                />
+            </div>
+            <div>
+                <label for="description" class="form-label">Description</label>
+                <textarea
+                    name="listing[description]"
+                    cols="30"
+                    rows="3"
+                    placeholder="enter description"
+                    id="description"
+                    class="form-control mb-3"
+                ></textarea>
+            </div>
+            <div>
+                <label for="image" class="form-label">Image Link</label>
+                <input
+                    type="text"
+                    name="listing[image]"
+                    placeholder="enter image URL/Link"
+                    id="image"
+                    class="form-control mb-3"
+                />
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input
+                        type="number"
+                        name="listing[price]"
+                        placeholder="enter Price"
+                        id="price"
+                        class="form-control mb-3"
+                    />
+                </div>
+                <div class="col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input
+                        type="text"
+                        name="listing[country]"
+                        placeholder="enter Country"
+                        id="country"
+                        class="form-control mb-3"
+                    />
+                </div>
+            </div>
+            <div>
+                <label for="location" class="form-label">Location</label>
+                <input
+                    type="text"
+                    name="listing[location]"
+                    placeholder="enter Location"
+                    id="location"
+                    class="form-control mb-3"
+                />
+            </div>
+            <br />
+            <button class="btn btn-dark add-btn">Add</button>
+            <br /><br /><br />
         </form>
-    </body>
-</html>
+    </div>
+</div>
+<!-- </body> -->
