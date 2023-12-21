@@ -11,9 +11,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
-const listings = require("./routes/listing.js");
-const reviews = require("./routes/review.js");
-const { log } = require("console");
+const listingRouter = require("./routes/listing.js");
+const reviewRouter = require("./routes/review.js");
+const userRouter = require("./routes/user.js")
 
 main()
     .then(() => {
@@ -65,21 +65,20 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get("/demouser", async (req, res) => {
-    let fakeUser = new User({
-        email: "student@email.com",
-        username: "delta-student",
-    });
+// app.get("/demouser", async (req, res) => {
+//     let fakeUser = new User({
+//         email: "student@email.com",
+//         username: "delta-student",
+//     });
 
-    let registeredUser = await User.register(fakeUser, "hello-world");
-    res.send(registeredUser);
-});
+//     let registeredUser = await User.register(fakeUser, "hello-world");
+//     res.send(registeredUser);
+// });
 
-//listings
-app.use("/listings", listings);
-
-//reviews
-app.use("/listings/:id/reviews", reviews);
+//Routes
+app.use("/listings", listingRouter);
+app.use("/listings/:id/reviews", reviewRouter);
+app.use("/", userRouter)
 
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page not found!"));
