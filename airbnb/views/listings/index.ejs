@@ -1,12 +1,35 @@
 <% layout("/layouts/boilerplate.ejs") %>
 <h2>All Listings</h2>
-<!-- Cards -->
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+
+<style>
+    #filters {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter {
+        text-align: center;
+        padding-right: 1rem;
+    }
+</style>
+
+<div id="filters">
+    <div class="filter">
+        <div><i class="fa-solid fa-fire"></i></div>
+        <p>Trending</p>
+    </div>
+
+    <div class="filter">
+        <div><i class="fa-solid fa-person-shelter"></i></div>
+        <p>Rooms</p>
+    </div>
+</div>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
     <% for (let listing of allListings) { %>
     <a href="/listings/<%=listing._id%>" class="listing-link">
         <div class="card listing-card">
             <img
-                src="<%=listing.image%>"
+                src="<%=listing.image.url%>"
                 class="card-img-top"
                 alt="listing_image"
                 style="height: 20rem"

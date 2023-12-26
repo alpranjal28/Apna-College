@@ -7,7 +7,7 @@ body {
 .container {
     flex: 1;
 }
-.btn{
+.btn {
     width: 10rem;
 }
 
@@ -118,11 +118,17 @@ body {
     height: 30vh;
 }
 
-.btns{
+.btns {
     display: flex;
 }
 
 .show-card {
     padding-left: 0;
     padding-right: 0;
+}
+
+/* map  */
+#map {
+    height: 400px;
+    width: 80vh;
 }
