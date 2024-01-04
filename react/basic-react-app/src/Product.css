@@ -1,0 +1,10 @@
+.product {
+    border: 1px solid white;
+    border-radius: 15px;
+    color: red;
+    background-color: yellow;
+    margin: 1rem;
+    /* padding: 2rem; */
+    height: 200px;
+    width: 150px;
+}
