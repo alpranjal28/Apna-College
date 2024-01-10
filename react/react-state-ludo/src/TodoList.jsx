@@ -2,16 +2,13 @@ import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function TodoList() {
-    let [todos, setTodos] = useState([{ task: "Sample task", id: uuidv4() }]);
+    let [todos, setTodos] = useState([{ task: "Sample task", id: uuidv4(), isDone: false }]);
     let [newTodo, setNewTodo] = useState("");
 
     let addNewTask = () => {
         // console.log("we have to add new task in todo");
         setTodos((prevTodos) => {
-            return [
-                ...prevTodos,
-                { task: newTodo, id: uuidv4(), isDone: false },
-            ];
+            return [...prevTodos, { task: newTodo, id: uuidv4(), isDone: false }];
         });
     };
 
@@ -20,27 +17,25 @@ export default function TodoList() {
     };
 
     let deleteTodo = (id) => {
-        setTodos((prevTodos) =>
-            todos.filter((prevTodos) => prevTodos.id != id)
-        );
+        setTodos((prevTodos) => todos.filter((prevTodos) => prevTodos.id != id));
         //filter method sends a copy of object w/o target ID && passed onto setTodo
         //also make react rerender
     };
 
-    let upperCaseAll = () => {
+    let markAllAsDone = () => {
         let styles = { textDecoration: "line-through" };
 
         setTodos((prevTodos) =>
             prevTodos.map((prevTodo) => {
                 return {
                     ...prevTodo,
-                    task: prevTodo.task.toUpperCase(),
+                    isDone: (prevTodo.isDone = true),
                 };
             })
         );
     };
 
-    let upperCaseOne = (id) => {
+    let markAsDone = (id) => {
         setTodos((prevTodos) =>
             prevTodos.map((prevTodo) => {
                 if (prevTodo.id == id) {
@@ -71,18 +66,16 @@ export default function TodoList() {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
-                        <span>{todo.task}</span>
+                        <span style={todo.isDone ? { textDecorationLine: "line-through" } : {}}>
+                            {todo.task}
+                        </span>
                         &nbsp; &nbsp; &nbsp;
-                        <button onClick={() => deleteTodo(todo.id)}>
-                            delete
-                        </button>
-                        <button onClick={() => upperCaseOne(todo.id)}>
-                            upperCase One
-                        </button>
+                        <button onClick={() => deleteTodo(todo.id)}>delete</button>
+                        <button onClick={() => markAsDone(todo.id)}>mark as done</button>
                     </li>
                 ))}
             </ul>
-            <button onClick={upperCaseAll}>upperCaseAll</button>
+            <button onClick={markAllAsDone}>Mark All As Done</button>
         </div>
     );
 }
