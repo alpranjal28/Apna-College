@@ -10,24 +10,26 @@ export default function Todo() {
 
     let clickHandler = (id) => {
         console.log("delete", id);
-        dispatch(deleteTodo(id))
+        dispatch(deleteTodo(id));
     };
     let markDone = (id) => {
         console.log("taskCompleted", id);
-        dispatch(markAsDone(id))
+        dispatch(markAsDone(id));
     };
 
+    let styles = { color: "red" };
     return (
         <>
             <h1>Todo List</h1>
             <AddForm />
             <ul>
                 {todos.map((todo) => (
-                    // console.log(todo,"at reRender"),
-                    <li key={todo.id}>
+                    <li key={todo.id} style={todo.isDone ? { color:"red" } : {}}>
                         {todo.task}
                         <button onClick={() => clickHandler(todo.id)}>Delete</button>
-                        <button onClick={() => markDone(todo.id)}>Task Completed</button>
+                        <button onClick={() => markDone(todo.id)}>
+                            Task Completed
+                        </button>
                     </li>
                 ))}
             </ul>

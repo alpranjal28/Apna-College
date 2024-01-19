@@ -21,20 +21,18 @@ export const todoSlice = createSlice({
         deleteTodo: (state, action) => {
             // action.payload
             state.todos = state.todos.filter((todo) => todo.id !== action.payload);
-            console.log(state.todos,"after deleting value from state.todos");
-
+            console.log(state.todos, "after deleting value from state.todos");
         },
         markAsDone: (state, action) => {
             //action.payload
             state.todos = state.todos.map((todo) => {
                 if (todo.id === action.payload) {
-                    console.log(action.payload, "and", todo.id);
-                    console.log(todo, "before isTrue");
-                    todo.isDone = true;
-                    console.log(todo, "after isTrue");
+                    return { ...todo, isDone: true };
+                } else {
+                    return { ...todo };
                 }
             });
-            console.log(state.todos,"after passing value to state.todos");
+            console.log(state.todos, "after passing value to state.todos");
         },
     },
 });
