@@ -4,7 +4,7 @@
     const listing = <%-JSON.stringify(listing)%>
 </script>
 
-<div class="row mt-3">
+<div class="row mt-3 container">
     <div class="col-8 offset-3">
         <h3><%= listing.title %></h3>
     </div>
@@ -143,7 +143,7 @@
         </div>
         <%}%>
     </div>
-    <div class="col-8 offset-3 mb-3 mt-3">
+    <div class="card col-6 offset-3 show-card listing-card">
         <h3>Where you'll be</h3>
         <div id="map"></div>
     </div>

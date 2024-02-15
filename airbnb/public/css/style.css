@@ -129,6 +129,6 @@ body {
 
 /* map  */
 #map {
-    height: 400px;
-    width: 80vh;
+    height: 30vh;
+    width: 100%;
 }
